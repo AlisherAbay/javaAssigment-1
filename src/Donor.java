@@ -16,4 +16,21 @@ public class Donor {
     public void donateMoney(Donate donate) {
         donatedMoney += donate.getSum();
     }
+    public ArrayList<Charity> getCharites() {
+        return charitiesArrayList;
+    }
+    public String toString() {
+        return "name and surname: " + nameSurname;
+    }
+    @Override
+    public boolean equals(Object obj) {
+        Donor donate2 = (Donor) obj;
+        return this.nameSurname.equals(donate2.nameSurname);
+    }
+    @Override
+    public int hashCode() {
+        int result = donatedMoney;
+        result = 16 * result;
+        return result;
+    }
 }
