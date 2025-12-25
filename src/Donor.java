@@ -19,6 +19,7 @@ public class Donor {
     public ArrayList<Charity> getCharites() {
         return charitiesArrayList;
     }
+    @Override
     public String toString() {
         return "name and surname: " + nameSurname;
     }
