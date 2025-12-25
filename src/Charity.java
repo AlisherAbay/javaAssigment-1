@@ -24,6 +24,7 @@ public class Charity {
     public List<Donate> sortByMoney() {
         return donateArrayList.stream().sorted(Comparator.comparing(Donate::getSum)).toList();
     }
+    @Override
     public String toString() {
         return "Charity: " + title + " All money: " + String.valueOf(allMoney);
     }
